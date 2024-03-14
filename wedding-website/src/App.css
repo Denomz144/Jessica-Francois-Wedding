@@ -1,0 +1,178 @@
+/* App.css */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap");
+:root {
+  --font-header: "Playfair Display", serif;
+  --font-body: "Open Sans", sans-serif;
+  --primary-color: #007bff; /* Blue */
+  --hover-color: #0056b3; /* Darker blue */
+  --text-color: #333; /* Dark gray */
+  --background-color: #fff; /* White */
+  --border-color: #ccc; /* Light gray */
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 2s ease-in forwards;
+}
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slideInFromLeft {
+  animation: slideInFromLeft 1.5s ease-in forwards;
+}
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slideInFromRight {
+  animation: slideInFromRight 1.5s ease-in forwards;
+}
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: var(--font-body);
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+/* Hero Section Links */
+#hero a {
+  color: #ffffff;
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 10px 20px;
+  margin-right: 10px;
+  transition: background-color 0.3s ease;
+}
+#hero a:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+/* Ensure hero text is white and has appropriate spacing */
+#hero h1 {
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+  text-align: center;
+}
+#hero p {
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+  text-align: center;
+}
+/* Navigation link styles */
+/* Remove the default navigation bar styles if not needed */
+nav {
+  display: none;
+}
+
+/* General section styling */
+section {
+  width: 100%; /* Full width */
+  padding: 60px 30px; /* Adjust padding as needed */
+}
+
+/* Style adjustments for typography */
+h2,
+h3,
+h4 {
+  font-family: var(--font-header);
+}
+h1 {
+  font-family: var(--font-header);
+}
+p {
+  line-height: 1.6;
+}
+
+/* Gallery grid layout */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 10px;
+  padding: 50px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: auto; /* Adjust height to auto for responsive images */
+  object-fit: cover;
+}
+
+/* RSVP form */
+.rsvp-form {
+  max-width: 400px;
+  margin: auto;
+}
+/* RSVP button styles */
+button {
+  background-color: #fff;
+  color: #007bff;
+  border: 1px solid #007bff;
+  transition: background-color 0.3s, color 0.3s;
+}
+button:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+/* Buttons and input fields */
+button,
+input,
+textarea {
+  font: inherit;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  cursor: pointer;
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  border: none;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: var(--hover-color);
+}
+/* Responsive Design for smaller devices */
+@media (max-width: 768px) {
+  #hero a {
+    padding: 5px 10px;
+    margin-right: 5px;
+    font-size: 14px;
+  }
+
+  #hero h1 {
+    font-size: 3rem; /* Adjust font size for small screens */
+  }
+
+  #hero p {
+    font-size: 1rem; /* Adjust font size for small screens */
+  }
+}
