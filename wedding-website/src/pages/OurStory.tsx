@@ -145,7 +145,7 @@ const OurStory: React.FC = () => {
           "I saw her across the bar and I couldn't look away until I had the
           guts to talk to her."
         </p>
-        <cite>— Antoine</cite>
+        <cite>— Francois</cite>
       </blockquote>
 
       <blockquote className="text-xl italic my-8 mx-auto text-center">
@@ -153,7 +153,7 @@ const OurStory: React.FC = () => {
           "We caught eye contact at one point and I was mesmerized by that
           addicting smile of his."
         </p>
-        <cite>— Soria</cite>
+        <cite>— Jessica</cite>
       </blockquote>
 
       <section id="ceremony" className="flex flex-wrap md:flex-nowrap">
