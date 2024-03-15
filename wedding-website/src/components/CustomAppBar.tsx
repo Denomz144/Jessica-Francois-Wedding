@@ -1,45 +1,20 @@
-import { useState, ChangeEvent, MouseEvent } from "react";
+import { useState } from "react";
 
 import {
-  AppBar,
   Box,
-  Toolbar,
-  Typography,
   IconButton,
-  Switch,
-  FormControlLabel,
-  FormGroup,
-  MenuItem,
-  Menu,
   Drawer,
 } from "@mui/material";
 
-import { Menu as MenuIcon, AccountCircle } from "@mui/icons-material";
+import { Menu as MenuIcon,  } from "@mui/icons-material";
 import DrawerComponent from "./DrawerComponent";
-import viteLogo from "/vite.svg";
-import { useTranslation } from "react-i18next";
 interface CustomAppBarProps {
   pageTitle: string;
 }
 
-const CustomAppBar = ({ pageTitle }: CustomAppBarProps) => {
-  const [auth, setAuth] = useState<boolean>(true);
-  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
+const CustomAppBar = ({  }: CustomAppBarProps) => {
   const [mobileOpen, setMobileOpen] = useState<boolean>(false);
 
-  const { t } = useTranslation();
-
-  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
-    setAuth(event.target.checked);
-  };
-
-  const handleMenu = (event: MouseEvent<HTMLElement>) => {
-    setAnchorEl(event.currentTarget);
-  };
-
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
