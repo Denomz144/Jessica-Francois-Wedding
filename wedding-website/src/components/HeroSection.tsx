@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import heroImage from "../img/PXL_20230901_175328089_exported_72843.jpg";
+import heroVideo from "../video/PXL_20230901_175328089.mp4";
 import { useNavigate } from "react-router-dom";
 
 const HeroSection: React.FC = () => {
@@ -10,9 +10,9 @@ const HeroSection: React.FC = () => {
   }, []);
 
   // Updated Tailwind classnames for responsive design
-  const heroClassNames =
-    "relative flex items-center justify-center bg-cover bg-center " +
-    "h-screen"; // Full height on all screen sizes
+  // const heroClassNames =
+  //   "relative flex items-center justify-center bg-cover bg-center " +
+  //   "h-screen"; // Full height on all screen sizes
 
   return (
     <div className="flex flex-col">
@@ -54,21 +54,22 @@ const HeroSection: React.FC = () => {
           </button>
         </div>
       </div>
-      <div
-        id="hero"
-        className={heroClassNames}
-        style={{ backgroundImage: `url(${heroImage})` }}
-      >
-        {/* Adjusted padding here for mobile view */}
-        <div className="text-center text-white py-20 lg:py-20 pb-44 lg:pb-60">
-          <button
-            className="text-xl lg:text-3xl font-normal hover:underline lg:text-black text-white absolute lg:hidden lg:relative top-10 lg:top-auto right-6"
-            onClick={() => navigate("/")}
-          >
-            J&F 01.25.25
-          </button>
+      <div id="hero" className="relative flex items-center justify-center h-screen">
+        {/* Video replaces the backgroundImage */}
+        <video
+          autoPlay
+          loop
+          muted
+          className="absolute w-full h-full object-cover"
+        >
+          <source src={heroVideo} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+
+        <div className="relative z-10 text-center text-white p-20">
+          {/* Rest of your content */}
           <h1 className="text-4xl lg:text-6xl font-semibold leading-none">
-            Jessica & Francois
+            Jessica & François
           </h1>
           <p className="text-lg lg:text-2xl mt-2 lg:mt-4 mb-4 lg:mb-8">
             January 25, 2025

@@ -1,23 +1,32 @@
-// src/components/FooterSection.tsx
 import React from "react";
+import { useNavigate } from "react-router-dom";
+
 const FooterSection: React.FC = () => {
+  const navigate = useNavigate();
+
   return (
     <footer className="bg-white py-8">
       <div className="max-w-6xl mx-auto px-4 text-center">
         <div className="mb-4">
           {/* Footer Links */}
-          <a
-            href="/"
+          <button 
             className="text-lg px-4 py-2 hover:underline"
+            onClick={() => navigate("/")}
           >
             Ceremony & Reception
-          </a>
-          <a href="/location" className="text-lg px-4 py-2 hover:underline">
+          </button>
+          <button 
+            className="text-lg px-4 py-2 hover:underline"
+            onClick={() => navigate("/location")}
+          >
             Location
-          </a>
-          <a href="/rsvp" className="text-lg px-4 py-2 hover:underline">
+          </button>
+          <button 
+            className="text-lg px-4 py-2 hover:underline"
+            onClick={() => navigate("/rsvp")}
+          >
             RSVP
-          </a>
+          </button>
         </div>
         <div className="mb-4">
           {/* Social Share Options */}

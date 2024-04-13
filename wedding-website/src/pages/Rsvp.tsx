@@ -13,7 +13,8 @@ const Rsvp: React.FC = () => {
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [guests, setGuests] = useState("");
-  const [foodRestrictions, setFoodRestrictions] = useState("");
+  // const [foodRestrictions, setFoodRestrictions] = useState("");
+  const [numberOfGuests, setNumberOfGuests] = useState("");
   const [comments, setComments] = useState("");
   const [attending, setAttending] = useState("");
   useEffect(() => {
@@ -37,10 +38,12 @@ const Rsvp: React.FC = () => {
     setLastName("");
     setEmail("");
     setGuests("");
-    setFoodRestrictions("");
+    setNumberOfGuests("");
+    // setFoodRestrictions("");
     setComments("");
     setAttending(""); // Reset radio button
   };
+
   return (
     <div className="flex flex-col">
       <div
@@ -161,7 +164,7 @@ const Rsvp: React.FC = () => {
           method="POST"
           onSubmit={validateForm} // Pass handleSubmit directly without wrapping it
         >
-          <div className="flex flex-wrap -mx-3 mb-6">
+          <div className="flex flex-wrap -mx-0 mb-6">
             <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
               <label
                 className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
@@ -207,7 +210,7 @@ const Rsvp: React.FC = () => {
               />
             </div>
           </div>
-          <div className="flex flex-wrap -mx-3 mb-6">
+          <div className="flex flex-wrap -mx-0 mb-6">
             <div className="w-full px-3">
               <label
                 className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
@@ -259,8 +262,30 @@ const Rsvp: React.FC = () => {
               <label htmlFor="no">No</label>
             </div>
           </div>
+          {/* Number of Guests dropdown */}
+          <div className="flex flex-wrap -mx-0 mb-6">
+            <div className="w-full px-3">
+              <label
+                className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                htmlFor="number-of-guests"
+              >
+                Number of Guests (max 2)
+              </label>
+              <select
+                className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                id="number-of-guests"
+                value={numberOfGuests}
+                onChange={(e) => setNumberOfGuests(e.target.value)}
+                name="numberOfGuests"
+              >
+                <option value="">Select...</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+              </select>
+            </div>
+          </div>
           {/* Names of Guests in your Party */}
-          <div className="flex flex-wrap -mx-3 mb-6">
+          <div className="flex flex-wrap -mx-0 mb-6">
             <div className="w-full px-3">
               <label
                 className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
@@ -280,8 +305,8 @@ const Rsvp: React.FC = () => {
             </div>
           </div>
 
-          {/* Any food restrictions? */}
-          <div className="flex flex-wrap -mx-3 mb-6">
+          {/* Any food restrictions?
+          <div className="flex flex-wrap -mx-0 mb-6">
             <div className="w-full px-3">
               <label
                 className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
@@ -299,10 +324,10 @@ const Rsvp: React.FC = () => {
                 name="foodRestrictions" // This should match with the 'register' call in @formspree/react
               />
             </div>
-          </div>
+          </div> */}
 
           {/* Questions or Comments */}
-          <div className="flex flex-wrap -mx-3 mb-6">
+          <div className="flex flex-wrap -mx-0 mb-6">
             <div className="w-full px-3">
               <label
                 className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
