@@ -1,5 +1,5 @@
 import React from "react";
-import ceremonyImage from "../img/2020DIC25-new.jpg";
+import ceremonyImage from "../img/capilla.jpg";
 import { InView } from "react-intersection-observer";
 
 const CeremonySection: React.FC = () => {

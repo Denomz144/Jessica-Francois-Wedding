@@ -66,7 +66,9 @@ const HeroSection: React.FC = () => {
           Your browser does not support the video tag.
         </video>
 
-        <div className="relative z-10 text-center text-white p-20">
+
+      </div>
+      <div className="relative z-10 text-center text-black p-20">
           {/* Rest of your content */}
           <h1 className="text-4xl lg:text-6xl font-semibold leading-none">
             Jessica & François
@@ -74,8 +76,9 @@ const HeroSection: React.FC = () => {
           <p className="text-lg lg:text-2xl mt-2 lg:mt-4 mb-4 lg:mb-8">
             January 25, 2025
           </p>
+          <p className="text-sm lg:text-2xl mt-2 lg:mt-4 mb-4 lg:mb-8">San Salvador, El Salvador</p>
+          <p className="text-lg lg:text-2xl mt-2 lg:mt-4 mb-4 lg:mb-8">Save the date!</p>
         </div>
-      </div>
     </div>
   );
 };
