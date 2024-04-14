@@ -20,7 +20,7 @@ const CeremonySection: React.FC = () => {
           />
           {/* Contenido del texto alineado al centro y con padding solo en móviles */}
           <div
-            className="text-center"
+            className="text-center font-dancing"
             style={{
               maxWidth: "600px",
               margin: "0 auto", // Esto centra el contenido en todas las vistas
