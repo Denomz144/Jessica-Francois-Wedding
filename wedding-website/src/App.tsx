@@ -11,7 +11,7 @@ import FooterSection from './components/FooterSection';
 import OurStory from './pages/OurStory';
 import Rsvp from './pages/Rsvp';
 import Location from './pages/Location';
-import StorySection from "./components/StorySection";
+// import StorySection from "./components/StorySection";
 const App: React.FC = () => {
   return (
     <Router>
