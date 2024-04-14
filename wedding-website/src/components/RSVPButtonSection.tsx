@@ -43,10 +43,10 @@ const RSVPButtonSection: React.FC = () => {
       {/* Esta sección se mostrará solo en pantallas pequeñas (sm:) */}
       <div className="flex items-center justify-center w-full h-full px-8 md:px-0">
         <div className="max-w-md mx-auto text-center">
-          <p className="text-2xl md:text-5xl font-serif mb-10">
+          <p className="font-dancing text-2xl md:text-3xl mb-10">
             Your presence would make our celebration even more memorable.
           </p>
-          <p className="text-2xl md:text-5xl font-serif mb-10">
+          <p className="font-dancing text-2xl md:text-3xl mb-10">
             Please RSVP using the link provided to help us plan the perfect day.
           </p>
           <button
