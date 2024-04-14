@@ -8,7 +8,7 @@ import CeremonySection from './components/CeremonySection';
 import ReceptionSection from './components/ReceptionSection';
 import RSVPButtonSection from './components/RSVPButtonSection';
 import FooterSection from './components/FooterSection';
-import OurStory from './pages/OurStory';
+// import OurStory from './pages/OurStory';
 import Rsvp from './pages/Rsvp';
 import Location from './pages/Location';
 // import StorySection from "./components/StorySection";
@@ -27,7 +27,7 @@ const App: React.FC = () => {
               <FooterSection />
             </>
           } />
-          <Route path="our-story" element={<OurStory />} />
+          {/* <Route path="our-story" element={<OurStory />} /> */}
           <Route path="rsvp" element={<Rsvp />} />
           <Route path="location" element={<Location />} />
         </Route>

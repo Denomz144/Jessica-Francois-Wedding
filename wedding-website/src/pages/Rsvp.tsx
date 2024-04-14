@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import StoryImage from "../img/sacoByW.jpg";
+import StoryImage from "../img/0393.jpg";
 import { useForm, ValidationError } from "@formspree/react";
 import FooterSection from "../components/FooterSection";
 const Rsvp: React.FC = () => {
@@ -51,12 +51,12 @@ const Rsvp: React.FC = () => {
         style={{ padding: "1rem 10%", boxSizing: "border-box" }}
       >
         <div className="flex gap-8">
-          <button
+          {/* <button
             onClick={() => navigate("/our-story")}
             className="hover:underline text-lg"
           >
             Our Story
-          </button>
+          </button> */}
           <button
             onClick={() => navigate("/location")}
             className="hover:underline text-lg"
@@ -88,58 +88,12 @@ const Rsvp: React.FC = () => {
         <div className="h-1 w-screen bg-black mb-8 hidden sm:flex"></div>
       </div>
       <div
-        className="bg-contain bg-[center_top_-7rem] h-screen flex-col justify-center items-center bg-no-repeat hidden sm:flex"
+        className="w-full md:w-full h-80 md:h-screen bg-center bg-no-repeat bg-contain"
         style={{
-          maxWidth: "1900px",
-          marginLeft: "5rem",
-          maxHeight: "700px",
-          marginRight: "5rem",
           backgroundImage: `url(${StoryImage})`,
         }}
       ></div>
 
-      <div
-        className="bg-cover bg-no-repeat flex flex-col justify-center items-center sm:hidden "
-        style={{
-          backgroundImage: `url(${StoryImage})`,
-          backgroundSize: "160%", // Ajusta este valor para controlar el nivel de zoom
-          backgroundPosition: "right 10%", // Centra la imagen - ajusta según sea necesario
-          paddingTop: "5rem", // adjust this value to push the text up or down
-          paddingBottom: "10rem", // reduce this to reduce space at the bottom
-        }}
-      >
-        <button
-          className="absolute top-32 right-4 text-xl font-normal hover:underline text-white lg:hidden"
-          onClick={() => navigate("/")}
-          style={{ background: "rgba(0, 0, 0, 0.5)" }}
-        >
-          J&F 01.25.25
-        </button>
-
-        {/* Adjust this div's padding or margin as necessary */}
-        <div
-          style={{
-            padding: "1rem",
-            paddingBottom: "0.5rem",
-            marginTop: "12rem",
-            /* adjust this value as needed */ borderRadius: "10px",
-            // background: "rgba(0, 0, 0, 0.5)",
-          }}
-        >
-          {/* <p
-            className="text-4xl font-semibold text-white text-center"
-            style={{ textShadow: "2px 2px 4px #000000" }}
-          >
-            RSVP
-          </p>
-          <h2
-            className="text-2xl font-normal text-white mb-4"
-            style={{ textShadow: "2px 2px 4px #000000" }}
-          >
-            We look forward to seeing you! Fill out form below.
-          </h2> */}
-        </div>
-      </div>
       <div className="flex flex-col items-center justify-center w-full p-8 md:flex-row md:justify-center md:items-center">
         <div
           className="text-center font-dancing"

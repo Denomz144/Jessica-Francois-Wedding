@@ -21,14 +21,14 @@ const Location: React.FC = () => {
         style={{ padding: "1rem 10%", boxSizing: "border-box" }}
       >
         <div className="flex gap-8">
-          <button
+          {/* <button
             onClick={() => navigate("/our-story")}
             className="hover:underline text-lg"
           >
             Our Story
-          </button>
+          </button> */}
           <button
-            onClick={() => navigate("/travel")}
+            onClick={() => navigate("/location")}
             className="hover:underline text-lg"
           >
             Location

@@ -46,7 +46,7 @@ const CustomAppBar = ({  }: CustomAppBarProps) => {
           <DrawerComponent
             pages={[
               { name: "Home", href: "/" },
-              { name: "Our Story", href: "our-story" },
+              // { name: "Our Story", href: "our-story" },
               { name: "RSVP", href: "rsvp" },
               { name: "Location", href: "location" },
             ]}
