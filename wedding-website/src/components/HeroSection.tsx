@@ -74,7 +74,7 @@ const HeroSection: React.FC = () => {
             Jessica & François
           </h1>
           <p className="text-lg lg:text-1xl mt-2 lg:mt-4 mb-4 lg:mb-8">
-            January 25, 2025
+            January 25th, 2025
           </p>
           <p className="text-sm lg:text-1xl mt-2 lg:mt-4 mb-12 lg:mb-8">San Salvador, El Salvador</p>
           <p className="font-dancing text-2xl lg:text-4xl mt-2 lg:mt-4 mb-4 lg:mb-8">Save the date!</p>

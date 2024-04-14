@@ -1,12 +1,12 @@
 // src/components/HeroSection.tsx
 import React, { useEffect } from "react";
-import heroImage from "../img/83e76d_1551060f90134258874bd64364b84a93~mv2.webp";
+import heroImage from "../img/capilla.jpg";
 import { useNavigate } from "react-router-dom";
 import FooterSection from "../components/FooterSection";
 const heroStyle = {
   marginBottom: "4rem", // Adjust the gap size as needed
   backgroundImage: `url(${heroImage})`,
-  backgroundSize: "cover",
+  backgroundSize: "contain",
 };
 
 const Location: React.FC = () => {
@@ -56,38 +56,27 @@ const Location: React.FC = () => {
       </div>
       <div
         id="hero"
-        className="relative h-screen flex items-center justify-center bg-no-repeat"
+        className="w-full md:w-full h-80 md:h-screen bg-center bg-no-repeat bg-cover"
         style={heroStyle}
       >
-        <button
-          className="text-xl lg:text-3xl font-normal hover:underline lg:text-black text-white absolute lg:hidden lg:relative top-10 lg:top-auto right-6"
-          onClick={() => navigate("/")}
-        >
-          J&F 01.25.25
-        </button>
-        <div style={{ padding: "1rem", background: "rgba(0, 0, 0, 0.5)" }}>
-          <div className="text-center text-white">
-            <h1
-              className="text-6xl font-semibold"
-              style={{ textShadow: "2px 2px 4px #000000" }}
-            >
-              Travel
-            </h1>
-            <p
-              className="text-2xl mt-4 mb-8"
-              style={{ textShadow: "2px 2px 4px #000000" }}
-            >
-              Caja Marca, El Salvador
+      </div>
+      <div
+            className="text-center font-serif"
+            style={{
+              maxWidth: "600px",
+              margin: "0 auto", // Esto centra el contenido en todas las vistas
+            }}
+          >
+            <p className="text-xl md:text-2xl mb-2">CajaMarca</p>
+            <p className="text-xl md:text-2xl mb-2">
+              Ruta al boqueron, km 22.5,
+            </p>
+            <p className="text-xl md:text-2xl mb-10">
+              Volcán de San Salvador,<p></p>El Salvador
             </p>
           </div>
-        </div>
-      </div>
       <div className="text-center py-8">
-        <h1 className="text-6xl font-light mb-4">Directions</h1>
-        <p>
-          Caja Marca is a short trip away from San Salvador. follow the
-          instructions below.
-        </p>
+        <h1 className="text-6xl font-serif mb-4">Directions</h1>
         <div className="max-w-4xl mx-auto overflow-hidden rounded-lg shadow-lg">
           <iframe
             width="100%"
