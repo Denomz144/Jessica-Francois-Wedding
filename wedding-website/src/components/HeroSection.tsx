@@ -73,10 +73,10 @@ const HeroSection: React.FC = () => {
           <h1 className="text-4xl lg:text-6xl mb-16 font-dancing leading-none">
             Jessica & François
           </h1>
-          <p className="text-lg lg:text-2xl mt-2 lg:mt-4 mb-4 lg:mb-8">
+          <p className="text-lg lg:text-1xl mt-2 lg:mt-4 mb-4 lg:mb-8">
             January 25, 2025
           </p>
-          <p className="text-sm lg:text-2xl mt-2 lg:mt-4 mb-12 lg:mb-8">San Salvador, El Salvador</p>
+          <p className="text-sm lg:text-1xl mt-2 lg:mt-4 mb-12 lg:mb-8">San Salvador, El Salvador</p>
           <p className="font-dancing text-2xl lg:text-2xl mt-2 lg:mt-4 mb-4 lg:mb-8">Save the date!</p>
         </div>
     </div>
