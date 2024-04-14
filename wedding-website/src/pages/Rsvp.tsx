@@ -134,10 +134,10 @@ const Rsvp: React.FC = () => {
             paddingBottom: "0.5rem",
             marginTop: "12rem",
             /* adjust this value as needed */ borderRadius: "10px",
-            background: "rgba(0, 0, 0, 0.5)",
+            // background: "rgba(0, 0, 0, 0.5)",
           }}
         >
-          <p
+          {/* <p
             className="text-4xl font-semibold text-white text-center"
             style={{ textShadow: "2px 2px 4px #000000" }}
           >
@@ -148,13 +148,30 @@ const Rsvp: React.FC = () => {
             style={{ textShadow: "2px 2px 4px #000000" }}
           >
             We look forward to seeing you! Fill out form below.
-          </h2>
+          </h2> */}
         </div>
       </div>
-
+      <div className="w-full md:w-1/2 flex items-center justify-center p-8 md:p-0">
+        <div
+          className="text-center font-dancing"
+          style={{
+            maxWidth: "600px",
+            margin: "0 auto", // Esto centra el contenido en todas las vistas
+          }}
+        >
+          <p className="text-2xl md:text-5xl font-serif mb-10">
+            Thank you from the bottom of our hearts for your love, support, and
+            for being part of our lives.
+          </p>
+          <p className="text-2xl md:text-5xl font-serif mb-10">
+            {" "}
+            We can't wait to celebrate this unforgettable day with you!
+          </p>
+        </div>
+      </div>
       <div className="flex flex-col items-center py-8">
-        <h1 className="text-3xl font-bold mb-6">
-          Jessica & Francois's Wedding
+        <h1 className="text-3xl font-dancing mb-6">
+          RSVP
         </h1>
 
         {/* Make sure to replace the action attribute with the correct URL */}

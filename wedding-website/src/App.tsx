@@ -22,7 +22,7 @@ const App: React.FC = () => {
               <HeroSection />
               <CeremonySection />
               <ReceptionSection />
-              <StorySection />
+              {/* <StorySection /> */}
               <RSVPButtonSection />
               <FooterSection />
             </>

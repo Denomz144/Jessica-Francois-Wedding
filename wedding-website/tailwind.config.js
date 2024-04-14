@@ -2,6 +2,9 @@ module.exports = {
   content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      fontFamily: {
+        'dancing': ['Dancing Script', 'cursive'], // Use a name like 'dancing' for easy reference
+      },
       height: {
         128: "40rem", // You can set this value to the height you need
       },

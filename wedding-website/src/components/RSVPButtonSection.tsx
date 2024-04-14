@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import backgroundImage from "../img/torontoSt2_upscaled.jpg";
+import backgroundImage from "../img/torontoSt.jpg";
 
 const RSVPButtonSection: React.FC = () => {
   const navigate = useNavigate();
@@ -23,7 +23,10 @@ const RSVPButtonSection: React.FC = () => {
           backgroundImage: `url(${backgroundImage})`,
         }}
       >
-        <p className="text-4xl font-semi-bold text-white" style={{ marginTop: "1rem" }}>
+        <p
+          className="text-4xl font-semi-bold text-white"
+          style={{ marginTop: "1rem" }}
+        >
           Join Us
         </p>
         <h2 className="text-6xl font-normal text-white mb-12">
@@ -36,8 +39,28 @@ const RSVPButtonSection: React.FC = () => {
           RSVP
         </a>
       </div>
-      
+
       {/* Esta sección se mostrará solo en pantallas pequeñas (sm:) */}
+      <div
+        className="text-center font-dancing"
+        style={{
+          maxWidth: "600px",
+          margin: "0 auto", // Centered for all views
+        }}
+      >
+        <p className="text-2xl md:text-5xl font-serif mb-10">
+          Your presence would make our celebration even more memorable.
+        </p>
+        <p className="text-2xl md:text-5xl font-serif mb-10">
+          Please RSVP using the link provided to help us plan the perfect day.
+        </p>
+        <button
+          onClick={handleRsvpClick}
+          className="text-lg font-serif bg-black text-white px-8 py-4 rounded mb-8 hover:bg-gray-800 transition-colors"
+        >
+          RSVP
+        </button>
+      </div>
       <div
         id="rsvp-button-section-small"
         className="sm:hidden flex flex-col justify-center items-center text-center h-screen bg-cover bg-center"
@@ -45,11 +68,23 @@ const RSVPButtonSection: React.FC = () => {
           backgroundImage: `url(${backgroundImage})`,
         }}
       >
-        <div style={{ background: 'rgba(0, 0, 0, 0.5)', padding: '1rem', borderRadius: '10px' }}>
-          <p className="text-4xl font-semibold text-white" style={{ textShadow: '2px 2px 4px #000000' }}>
+        {/* <div
+          style={{
+            background: "rgba(0, 0, 0, 0.5)",
+            padding: "1rem",
+            borderRadius: "10px",
+          }}
+        >
+          <p
+            className="text-4xl font-semibold text-white"
+            style={{ textShadow: "2px 2px 4px #000000" }}
+          >
             Join Us
           </p>
-          <h2 className="text-6xl font-bold text-white mb-4" style={{ textShadow: '2px 2px 4px #000000' }}>
+          <h2
+            className="text-6xl font-bold text-white mb-4"
+            style={{ textShadow: "2px 2px 4px #000000" }}
+          >
             We hope you can make it!
           </h2>
           <button
@@ -58,7 +93,7 @@ const RSVPButtonSection: React.FC = () => {
           >
             RSVP
           </button>
-        </div>
+        </div> */}
       </div>
     </div>
   );
