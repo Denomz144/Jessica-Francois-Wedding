@@ -9,9 +9,9 @@ const ReceptionSection: React.FC = () => {
         <section
           ref={ref}
           id="reception"
-          className={`flex flex-col md:flex-row-reverse ${
+          className={`flex ${
             inView ? "animate-fadeIn" : ""
-          }`}
+          } justify-center items-center`} // This ensures the content is centered in the viewport
         >
           {/* Image container for desktop view on the right and mobile view on top */}
           <div
@@ -20,13 +20,6 @@ const ReceptionSection: React.FC = () => {
             }`}
             style={{ backgroundImage: `url(${receptionImage})` }}
           />
-          {/* Text container on the left for desktop view and on bottom for mobile view */}
-          <div
-            className={`w-full md:w-1/2 flex items-center justify-center p-0 md:p-0 ${
-              inView ? "slideInFromLeft" : ""
-            }`}
-          >
-          </div>
         </section>
       )}
     </InView>
