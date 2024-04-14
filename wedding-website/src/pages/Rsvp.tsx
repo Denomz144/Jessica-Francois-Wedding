@@ -96,18 +96,7 @@ const Rsvp: React.FC = () => {
           marginRight: "5rem",
           backgroundImage: `url(${StoryImage})`,
         }}
-      >
-        <p
-          className="text-4xl font-semi-bold text-white"
-          style={{ marginTop: "1rem" }}
-        >
-          RSVP
-        </p>
-        <h2 className="text-2xl font-normal text-white mb-12">
-          We look forward to seeing you! Fill out form below.
-        </h2>
-        {/* Image will be displayed as a background here */}
-      </div>
+      ></div>
 
       <div
         className="bg-cover bg-no-repeat flex flex-col justify-center items-center sm:hidden "
@@ -151,28 +140,28 @@ const Rsvp: React.FC = () => {
           </h2> */}
         </div>
       </div>
-      <div className="w-full md:w-1/2 flex items-center justify-center p-8 md:p-0">
+      <div className="flex flex-col items-center justify-center w-full p-8 md:flex-row md:justify-center md:items-center">
         <div
           className="text-center font-dancing"
           style={{
             maxWidth: "600px",
-            margin: "0 auto", // Esto centra el contenido en todas las vistas
+            // The following line ensures the text content takes up full width on smaller screens,
+            // and the 'mx-auto' centers it on larger screens within the 'maxWidth' bounds.
+            width: "100%", // Take the full width to ensure centering on smaller screens
+            margin: "0 auto", // Center the content horizontally within its container
           }}
         >
-          <p className="text-2xl md:text-5xl font-serif mb-10">
+          <p className="text-2xl md:text-3xl font-serif mb-10">
             Thank you from the bottom of our hearts for your love, support, and
             for being part of our lives.
           </p>
-          <p className="text-2xl md:text-5xl font-serif mb-10">
-            {" "}
-            We can't wait to celebrate this unforgettable day with you!
+          <p className="text-2xl md:text-3xl font-serif mb-10">
+            We can't wait to celebrate this unforgettable day with you!
           </p>
         </div>
       </div>
       <div className="flex flex-col items-center py-8">
-        <h1 className="text-3xl font-dancing mb-6">
-          RSVP
-        </h1>
+        <h1 className="text-3xl font-dancing mb-6">RSVP</h1>
 
         {/* Make sure to replace the action attribute with the correct URL */}
         <form
