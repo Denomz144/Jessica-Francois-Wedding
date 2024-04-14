@@ -104,7 +104,7 @@ const OurStory: React.FC = () => {
           style={{ padding: "5rem 10%", marginRight: "13rem" }}
         >
           <button
-            className="text-3xl font-normal hover:underline"
+            className="text-3xl font-dancing hover:underline"
             onClick={() => navigate("/")}
           >
             J&F 01.25.25
