@@ -26,7 +26,7 @@ const CeremonySection: React.FC = () => {
               margin: "0 auto", // Esto centra el contenido en todas las vistas
             }}
           >
-            <h2 className="font-dancing text-4xl md:text-7xl mb-10">
+            <h2 className="font-dancing text-4xl md:text-7xl mb-10 mt-10">
               Our Ceremony
             </h2>
             <p className="text-2xl md:text-5xl font-serif mb-10">6:00 PM</p>
@@ -34,7 +34,7 @@ const CeremonySection: React.FC = () => {
             <p className="text-xl md:text-2xl mb-2">
               Ruta al boqueron, km 22.5,
             </p>
-            <p className="text-xl md:text-2xl mb-4">
+            <p className="text-xl md:text-2xl mb-10">
               Volcán de San Salvador,<p></p>El Salvador
             </p>
           </div>
