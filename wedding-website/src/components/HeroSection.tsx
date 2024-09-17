@@ -84,7 +84,7 @@ const HeroSection: React.FC = () => {
           Oscar Muñoz y Yesenia Escalante de Muñoz
         </p>
         <p className="font-dancing text-xl lg:text-2xl mt-2 lg:mt-4 mb-4 lg:mb-8">
-          Yvon Chateuavert y Johanne Boutin
+          Yvon Châteauvert y Johanne Boutin
         </p>
         <p className="text-lg lg:text-2xl mt-2 lg:mt-4 mb-4 lg:mb-8">
           Tienen el honor en invitarle a la Ceremonia de Matrimonio Religioso de
@@ -98,7 +98,7 @@ const HeroSection: React.FC = () => {
           Oscar Muñoz and Yesenia Escalante de Muñoz
         </p>
         <p className="font-dancing text-xl lg:text-2xl mt-2 lg:mt-4 mb-4 lg:mb-8">
-          Yvon Chateuavert and Johanne Boutin
+          Yvon Châteauvert and Johanne Boutin
         </p>
         <p className="text-lg lg:text-2xl mt-2 lg:mt-4 mb-4 lg:mb-8">
           Have the honor to invite you to the Religious Wedding Ceremony of
