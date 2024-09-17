@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import heroVideo from "../video/PXL_20230901_175328089.mp4";
+import heroVideo from "../video/Pxl 20230901 175328089(1).mp4";
 import { useNavigate } from "react-router-dom";
 import CountdownTimer from "./CountdownTimer";
 
