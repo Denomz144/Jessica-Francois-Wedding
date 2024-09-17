@@ -9,11 +9,6 @@ const HeroSection: React.FC = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  // Updated Tailwind classnames for responsive design
-  // const heroClassNames =
-  //   "relative flex items-center justify-center bg-cover bg-center " +
-  //   "h-screen"; // Full height on all screen sizes
-
   return (
     <div className="flex flex-col">
       <div
@@ -21,12 +16,6 @@ const HeroSection: React.FC = () => {
         style={{ padding: "1rem 10%", boxSizing: "border-box" }}
       >
         <div className="flex gap-8">
-          {/* <button
-            onClick={() => navigate("/our-story")}
-            className="hover:underline text-lg"
-          >
-            Our Story
-          </button> */}
           <button
             onClick={() => navigate("/location")}
             className="hover:underline text-lg"
@@ -66,8 +55,10 @@ const HeroSection: React.FC = () => {
           </button>
         </div>
       </div>
-      <div id="hero" className="relative flex items-center justify-center h-screen">
-        {/* Video replaces the backgroundImage */}
+      <div
+        id="hero"
+        className="relative flex items-center justify-center h-screen"
+      >
         <video
           autoPlay
           loop
@@ -77,20 +68,45 @@ const HeroSection: React.FC = () => {
           <source src={heroVideo} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-
-
       </div>
       <div className="relative z-10 text-center text-black p-20">
-          {/* Rest of your content */}
-          <h1 className="text-4xl lg:text-6xl mb-16 font-dancing leading-none">
-            Jessica & François
-          </h1>
-          <p className="text-lg lg:text-1xl mt-2 lg:mt-4 mb-4 lg:mb-8">
-            January 25th, 2025
-          </p>
-          <p className="text-sm lg:text-1xl mt-2 lg:mt-4 mb-12 lg:mb-8">San Salvador, El Salvador</p>
-          <p className="font-dancing text-2xl lg:text-4xl mt-2 lg:mt-4 mb-4 lg:mb-8">Save the date!</p>
-        </div>
+        {/* Aquí está el nuevo texto */}
+        <h1 className="text-4xl lg:text-6xl mb-8 font-dancing leading-none">
+          Jessica & François
+        </h1>
+        <p className="text-lg lg:text-1xl mt-2 lg:mt-4 mb-4 lg:mb-8">
+          January 25th, 2025
+        </p>
+        <hr style={{ border: "0.5px solid #aaa", margin: "30px 0" }} />
+        <p className="font-dancing text-xl lg:text-2xl mt-2 lg:mt-4 mb-4 lg:mb-8">
+          Oscar Muñoz y Yesenia Escalante de Muñoz
+        </p>
+        <p className="font-dancing text-xl lg:text-2xl mt-2 lg:mt-4 mb-4 lg:mb-8">
+          Yvon Chateuavert y Johanne Boutin
+        </p>
+        <p className="text-lg lg:text-2xl mt-2 lg:mt-4 mb-4 lg:mb-8">
+          Tienen el honor en invitarle a la Ceremonia de Matrimonio Religioso de
+          Jessica Muñoz y Francois Chateuavert, que se efectuará el día 25 de
+          Enero a las 6:00 p.m. en la capilla de Cajamarca. Recepción a seguir.
+        </p>
+        <div style={{ margin: "30px 0" }}></div>
+        <hr style={{ border: "0.5px solid #aaa", margin: "30px 0" }} />
+        <div style={{ margin: "30px 0" }}></div>
+        <p className="font-dancing text-lg lg:text-2xl mt-2 lg:mt-4 mb-4 lg:mb-8">
+          Oscar Muñoz and Yesenia Escalante de Muñoz
+        </p>
+        <p className="font-dancing text-lg lg:text-2xl mt-2 lg:mt-4 mb-4 lg:mb-8">
+          Yvon Chateuavert and Johanne Boutin
+        </p>
+        <p className="text-lg lg:text-2xl mt-2 lg:mt-4 mb-4 lg:mb-8">
+          Have the honor to invite you to the Religious Wedding Ceremony of
+          <span className="font-sans"> Jessica Munoz </span>
+          and
+          <span className="font-sans"> Francois Chateuavert</span>, which will
+          take place on January 25th at 6:00 p.m. in the Chapel of Cajamarca.
+          Reception to follow.
+        </p>
+      </div>
     </div>
   );
 };
