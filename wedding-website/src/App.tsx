@@ -11,6 +11,8 @@ import FooterSection from './components/FooterSection';
 // import OurStory from './pages/OurStory';
 import Rsvp from './pages/Rsvp';
 import Location from './pages/Location';
+import Registry from './pages/Registry';
+import FAQS from './pages/FAQs';
 // import StorySection from "./components/StorySection";
 const App: React.FC = () => {
   return (
@@ -30,6 +32,8 @@ const App: React.FC = () => {
           {/* <Route path="our-story" element={<OurStory />} /> */}
           <Route path="rsvp" element={<Rsvp />} />
           <Route path="location" element={<Location />} />
+          <Route path="Registry" element={<Registry />} />
+          <Route path="FAQS" element={<FAQS />} />
         </Route>
       </Routes>
     </Router>
