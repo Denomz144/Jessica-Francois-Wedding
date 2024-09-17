@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import heroVideo from "../video/PXL_20230901_175328089.mp4";
 import { useNavigate } from "react-router-dom";
+import CountdownTimer from "./CountdownTimer";
 
 const HeroSection: React.FC = () => {
   const navigate = useNavigate();
@@ -77,6 +78,7 @@ const HeroSection: React.FC = () => {
         <p className="text-lg lg:text-1xl mt-2 lg:mt-4 mb-4 lg:mb-8">
           January 25th, 2025
         </p>
+        <CountdownTimer />
         <hr style={{ border: "0.5px solid #aaa", margin: "30px 0" }} />
         <p className="font-dancing text-xl lg:text-2xl mt-2 lg:mt-4 mb-4 lg:mb-8">
           Oscar Muñoz y Yesenia Escalante de Muñoz
@@ -86,23 +88,23 @@ const HeroSection: React.FC = () => {
         </p>
         <p className="text-lg lg:text-2xl mt-2 lg:mt-4 mb-4 lg:mb-8">
           Tienen el honor en invitarle a la Ceremonia de Matrimonio Religioso de
-          Jessica Muñoz y Francois Chateuavert, que se efectuará el día 25 de
+          <span style={{fontWeight: "bold" }} className="font-sans"> Jessica Muñoz </span> y <span style={{fontWeight: "bold" }} className="font-sans"> François Châteauvert</span>, que se efectuará el día 25 de
           Enero a las 6:00 p.m. en la capilla de Cajamarca. Recepción a seguir.
         </p>
         <div style={{ margin: "30px 0" }}></div>
         <hr style={{ border: "0.5px solid #aaa", margin: "30px 0" }} />
         <div style={{ margin: "30px 0" }}></div>
-        <p className="font-dancing text-lg lg:text-2xl mt-2 lg:mt-4 mb-4 lg:mb-8">
+        <p className="font-dancing text-xl lg:text-2xl mt-2 lg:mt-4 mb-4 lg:mb-8">
           Oscar Muñoz and Yesenia Escalante de Muñoz
         </p>
-        <p className="font-dancing text-lg lg:text-2xl mt-2 lg:mt-4 mb-4 lg:mb-8">
+        <p className="font-dancing text-xl lg:text-2xl mt-2 lg:mt-4 mb-4 lg:mb-8">
           Yvon Chateuavert and Johanne Boutin
         </p>
         <p className="text-lg lg:text-2xl mt-2 lg:mt-4 mb-4 lg:mb-8">
           Have the honor to invite you to the Religious Wedding Ceremony of
-          <span className="font-sans"> Jessica Munoz </span>
+          <span style={{fontWeight: "bold" }} className="font-sans"> Jessica Muñoz </span>
           and
-          <span className="font-sans"> Francois Chateuavert</span>, which will
+          <span style={{fontWeight: "bold" }} className="font-sans"> François Châteauvert</span>, which will
           take place on January 25th at 6:00 p.m. in the Chapel of Cajamarca.
           Reception to follow.
         </p>
