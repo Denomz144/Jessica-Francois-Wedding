@@ -22,6 +22,18 @@ const FAQs: React.FC = () => {
           >
             Location
           </button>
+          <button
+            onClick={() => navigate("/Registry")}
+            className="hover:underline text-lg"
+          >
+            Registry
+          </button>
+          <button
+            onClick={() => navigate("/FAQs")}
+            className="hover:underline text-lg"
+          >
+            FAQs
+          </button>
         </div>
         <div
           className="flex-grow text-center"
