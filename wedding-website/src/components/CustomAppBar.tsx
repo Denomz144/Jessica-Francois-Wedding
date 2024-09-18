@@ -1,20 +1,16 @@
 import { useState } from "react";
 
-import {
-  Box,
-  IconButton,
-  Drawer,
-} from "@mui/material";
+import { Box, IconButton, Drawer } from "@mui/material";
 
-import { Menu as MenuIcon,  } from "@mui/icons-material";
+import { Menu as MenuIcon } from "@mui/icons-material";
 import DrawerComponent from "./DrawerComponent";
+
 interface CustomAppBarProps {
   pageTitle: string;
 }
 
-const CustomAppBar = ({  }: CustomAppBarProps) => {
+const CustomAppBar = ({}: CustomAppBarProps) => {
   const [mobileOpen, setMobileOpen] = useState<boolean>(false);
-
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -59,4 +55,5 @@ const CustomAppBar = ({  }: CustomAppBarProps) => {
     </Box>
   );
 };
+
 export default CustomAppBar;
