@@ -1,5 +1,5 @@
 import React from "react";
-import receptionImage from "../img/IMG_5450.jpeg"; // Replace with the path to your actual image
+import receptionImage from "../img/whatssap1.jpg"; // Replace with the path to your actual image
 import { InView } from "react-intersection-observer";
 
 const ReceptionSection: React.FC = () => {

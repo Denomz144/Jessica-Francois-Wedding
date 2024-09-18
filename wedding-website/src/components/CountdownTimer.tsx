@@ -1,4 +1,5 @@
 // src/components/CountdownTimer.tsx
+
 import React, { useState, useEffect } from 'react';
 
 const CountdownTimer: React.FC = () => {
@@ -33,19 +34,19 @@ const CountdownTimer: React.FC = () => {
     <div className="text-center p-4 bg-gray-100 rounded-lg shadow-md">
       <h2 className="text-2xl font-dancing mb-4 text-gray-800">Countdown to the Big Day!</h2>
       <div className="flex justify-center space-x-2">
-        <div className="bg-gray-200 p-3 rounded-lg">
+        <div className="bg-blue-200 p-3 rounded-lg">
           <span className="text-3xl font-bold text-gray-800">{timeLeft.days}</span>
           <p className="text-sm text-gray-600">Days</p>
         </div>
-        <div className="bg-gray-300 p-3 rounded-lg">
+        <div className="bg-blue-300 p-3 rounded-lg">
           <span className="text-3xl font-bold text-gray-800">{timeLeft.hours}</span>
           <p className="text-sm text-gray-600">Hours</p>
         </div>
-        <div className="bg-gray-400 p-3 rounded-lg">
+        <div className="bg-blue-200 p-3 rounded-lg">
           <span className="text-3xl font-bold text-gray-800">{timeLeft.minutes}</span>
           <p className="text-sm text-gray-600">Minutes</p>
         </div>
-        <div className="bg-gray-500 p-3 rounded-lg">
+        <div className="bg-blue-300 p-3 rounded-lg">
           <span className="text-3xl font-bold text-gray-800">{timeLeft.seconds}</span>
           <p className="text-sm text-gray-600">Seconds</p>
         </div>

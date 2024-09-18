@@ -1,4 +1,5 @@
 // src/components/HeroSection.tsx
+
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import FooterSection from "../components/FooterSection";
@@ -8,6 +9,7 @@ const Registry: React.FC = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+  
   return (
     <div className="flex flex-col">
       <div
@@ -15,12 +17,6 @@ const Registry: React.FC = () => {
         style={{ padding: "1rem 10%", boxSizing: "border-box" }}
       >
         <div className="flex gap-8">
-          {/* <button
-            onClick={() => navigate("/our-story")}
-            className="hover:underline text-lg"
-          >
-            Our Story
-          </button> */}
           <button
             onClick={() => navigate("/location")}
             className="hover:underline text-lg"
@@ -76,26 +72,20 @@ const Registry: React.FC = () => {
         <h2>¡Gracias por acompañarnos!</h2>
         <div style={{ margin: "30px 0" }}></div>
         <p>
-          Su presencia en nuestro día especial es el mejor regalo que podríamos
-          pedir.
-        </p>
-        <p>
-          Si desean hacernos un obsequio, una pequeña contribución para nuestra
-          luna de miel sería muy apreciada.
+          Su presencia en nuestra boda sería el mejor regalo que podríamos recibir,
+          pero si desean darnos otro obsequio, les agradeceremos que sea regalo de sobre para nuestra luna de miel.
         </p>
         <p>¡Muchas gracias!</p>
         <div style={{ margin: "30px 0" }}></div>
         <hr />
         <div style={{ margin: "30px 0" }}></div>
-        <h2>Thank You for Joining us!</h2>
+        <h2>Thank You for Joining Us!</h2>
         <div style={{ margin: "30px 0" }}></div>
         <p>
-          Your presence on our special day is the greatest gift we could ask
-          for.
+          Your presence on our special day is the greatest gift we could ask for.
         </p>
         <p>
-          If you feel inclined to give us a gift, a contribution towards our
-          honeymoon would be truly appreciated.
+          If you feel inclined to give us a gift, a contribution towards our honeymoon would be truly appreciated.
         </p>
         <p>Thank you!</p>
       </div>

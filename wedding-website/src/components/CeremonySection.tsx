@@ -49,7 +49,8 @@ const CeremonySection: React.FC = () => {
             <h2 className="font-dancing text-4xl md:text-7xl mb-10">
               Cocktail Hour
             </h2>
-            <p className="text-2xl md:text-5xl font-serif mb-10">7:00 PM</p>
+            <p className="text-2xl md:text-5xl font-serif mb-10">7:30 PM</p>
+            <p className="text-xl md:text-2xl mb-10">Salon Casa de la villa</p>
           </div>
           <div
             className="text-center font-dancing"
@@ -61,7 +62,7 @@ const CeremonySection: React.FC = () => {
             <h2 className="font-dancing text-4xl md:text-7xl mb-10">
               Reception
             </h2>
-            <p className="text-2xl md:text-5xl font-serif mb-10">7:30 PM</p>
+            <p className="text-2xl md:text-5xl font-serif mb-10">8:00 PM</p>
             <p className="text-xl md:text-2xl mb-2">CajaMarca</p>
             <p className="text-xl md:text-2xl mb-2">Salon Casa de la villa</p>
           </div>
