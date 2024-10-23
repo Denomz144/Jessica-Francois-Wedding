@@ -34,7 +34,18 @@ const Rsvp: React.FC = () => {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return re.test(String(email).toLowerCase());
   };
-
+  const handleModalMessage = () => {
+    if (attending === "no") {
+      return {
+        title: "Lamentamos que no puedas asistir. / We are sorry you can’t make it.",
+        message: "Agradecemos que nos lo hagas saber. ¡Te deseamos lo mejor! / Thank you for letting us know. We wish you all the best!",
+      };
+    }
+    return {
+      title: "¡Gracias! / Thank You!",
+      message: "Gracias por acompañarnos. Estamos emocionados de verte en la boda. / Thanks for joining us! We are excited to see you at the wedding.",
+    };
+  };
   const handleGuestChange = (index: number, value: string) => {
     const updatedGuests = [...guestNames];
     updatedGuests[index] = value;
@@ -418,11 +429,8 @@ const Rsvp: React.FC = () => {
       {showModal && (
         <div className="fixed inset-0 bg-black bg-opacity-50 overflow-y-auto h-full w-full flex justify-center items-center">
           <div className="bg-white p-5 rounded-lg text-center">
-            <h2 className="font-bold text-2xl mb-4">¡Gracias! / Thank You!</h2>
-            <p className="mb-4">
-              Gracias por acompañarnos. Estamos emocionados de verte en la boda.
-              / Thanks for joining us! We are excited to see you at the wedding.
-            </p>
+            <h2 className="font-bold text-2xl mb-4">{handleModalMessage().title}</h2>
+            <p className="mb-4">{handleModalMessage().message}</p>
             <button
               className="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-700"
               onClick={() => {
@@ -433,7 +441,6 @@ const Rsvp: React.FC = () => {
             >
               Cerrar / Close
             </button>
-
           </div>
         </div>
       )}
