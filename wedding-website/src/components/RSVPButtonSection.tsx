@@ -44,10 +44,10 @@ const RSVPButtonSection: React.FC = () => {
       <div className="flex items-center justify-center w-full h-full px-8 md:px-0">
         <div className="max-w-md mx-auto text-center">
           <p className="font-serif text-2xl md:text-3xl mb-10">
-            Your presence would make our celebration even more memorable.
+            Tu presencia haría que nuestra celebración sea aún más memorable.
           </p>
           <p className="font-serif text-2xl md:text-3xl mb-10">
-            Please RSVP using the link provided to help us plan the perfect day.
+            Por favor, confirma tu asistencia utilizando el enlace proporcionado para ayudarnos a planear el día perfecto.
           </p>
           <button
             onClick={handleRsvpClick}

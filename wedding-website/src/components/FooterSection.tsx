@@ -27,6 +27,18 @@ const FooterSection: React.FC = () => {
           >
             RSVP
           </button>
+          <button 
+            className="text-lg px-4 py-2 hover:underline"
+            onClick={() => navigate("/FAQs")}
+          >
+            FAQs
+          </button>
+          <button 
+            className="text-lg px-4 py-2 hover:underline"
+            onClick={() => navigate("/Registry")}
+          >
+            Registry
+          </button>
         </div>
         <div className="mb-4">
           {/* Social Share Options */}

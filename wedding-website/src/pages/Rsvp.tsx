@@ -16,6 +16,7 @@ const Rsvp: React.FC = () => {
   const [comments, setComments] = useState("");
   const [attending, setAttending] = useState("");
   const [foodAllergies, setFoodAllergies] = useState("");
+  const [guestNames, setGuestNames] = useState([""]); // Inicializa con un campo
 
   useEffect(() => {
     if (state.succeeded) {
@@ -23,14 +24,71 @@ const Rsvp: React.FC = () => {
     }
   }, [state.succeeded]);
 
+  // Función para validar el correo electrónico
+  const validateEmail = (email: string) => {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(String(email).toLowerCase());
+  };
+
+  const handleGuestChange = (index: number, value: string) => {
+    const updatedGuests = [...guestNames];
+    updatedGuests[index] = value;
+    setGuestNames(updatedGuests);
+  };
+  const addGuestField = () => {
+    if (guestNames.length < 4) {
+      setGuestNames([...guestNames, ""]); // Agrega un nuevo campo vacío
+    } else {
+      alert("¡Solo puedes agregar hasta 4 invitados! / You can only add up to 4 guests!");
+    }
+  };
+  const removeGuestField = (index: number) => {
+    const updatedGuests = guestNames.filter((_, i) => i !== index);
+    setGuestNames(updatedGuests);
+  };
   const validateForm = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+
     const guestCount = parseInt(numberOfGuests, 10);
 
-    if (guestCount > 0 && !guests) {
+    // Validar que el número de campos de invitados coincida con el número de invitados
+    if (guestCount > 0 && guestNames.length !== guestCount) {
       alert(
-        "Por favor, ingrese al menos un nombre de invitado. / Please enter at least one guest name."
+        `Por favor, ingrese el nombre de todos los invitados. Se requieren ${guestCount} nombres. / Please enter the name of all guests. ${guestCount} guest names are required.`
       );
+      return;
+    }
+
+    // Verificar que ninguno de los campos de nombre de invitados esté vacío si guestCount > 0
+    if (guestCount > 0) {
+      const emptyGuestNames = guestNames.filter((name) => !name.trim());
+      if (emptyGuestNames.length > 0) {
+        alert(
+          "Por favor, asegúrese de que los campos de nombre de los invitados no estén vacíos. / Please make sure guest name fields are not empty."
+        );
+        return;
+      }
+    }
+
+    // Validar que los campos de nombre y correo no estén vacíos
+    if (!firstName.trim()) {
+      alert("Por favor, ingrese su nombre. / Please enter your first name.");
+      return;
+    }
+
+    if (!lastName.trim()) {
+      alert("Por favor, ingrese su apellido. / Please enter your last name.");
+      return;
+    }
+
+    if (!email.trim()) {
+      alert("Por favor, ingrese su correo electrónico. / Please enter your email.");
+      return;
+    }
+
+    // Validar el formato del correo electrónico
+    if (!validateEmail(email)) {
+      alert("Por favor, ingrese un correo electrónico válido. / Please enter a valid email.");
       return;
     }
 
@@ -45,6 +103,8 @@ const Rsvp: React.FC = () => {
     setNumberOfGuests("");
     setComments("");
     setAttending("");
+    setFoodAllergies("");
+    setGuestNames([""]); // Resetea los nombres de invitados a un campo vacío
   };
 
   return (
@@ -232,59 +292,71 @@ const Rsvp: React.FC = () => {
           </div>
 
           <div className="flex flex-wrap -mx-0 mb-6">
-            <div className="w-full px-3">
-              <label
-                className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                htmlFor="number-of-guests"
-              >
-                Número total de invitados (incluyéndote a ti) / Total Number of
-                Guests (including yourself)
-              </label>
-              <select
-                className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                id="number-of-guests"
-                value={numberOfGuests}
-                onChange={(e) => setNumberOfGuests(e.target.value)}
-                name="numberOfGuests"
-              >
-                <option value="">Selecciona... / Select...</option>
-                <option value="0">0 (solo tú) / 0 (just you)</option>
-                <option value="1">
-                  1 (tú + 1 invitado) / 1 (you + 1 guest)
-                </option>
-                <option value="2">
-                  2 (tú + 2 invitados) / 2 (you + 2 guests)
-                </option>
-                <option value="3">
-                  3 (tú + 3 invitados) / 3 (you + 3 guests)
-                </option>
-                <option value="4">
-                  4 (tú + 4 invitados) / 4 (you + 4 guests)
-                </option>
-              </select>
-            </div>
-          </div>
+      <div className="w-full px-3">
+        <label
+          className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+          htmlFor="number-of-guests"
+        >
+          Número total de invitados (incluyéndote a ti) / Total Number of
+          Guests (including yourself)
+        </label>
+        <select
+          className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+          id="number-of-guests"
+          value={numberOfGuests}
+          onChange={(e) => setNumberOfGuests(e.target.value)}
+          name="numberOfGuests"
+        >
+          <option value="">Selecciona... / Select...</option>
+          <option value="0">0 (solo tú) / 0 (just you)</option>
+          <option value="1">1 (tú + 1 invitado) / 1 (you + 1 guest)</option>
+          <option value="2">2 (tú + 2 invitados) / 2 (you + 2 guests)</option>
+          <option value="3">3 (tú + 3 invitados) / 3 (you + 3 guests)</option>
+          <option value="4">4 (tú + 4 invitados) / 4 (you + 4 guests)</option>
+        </select>
+      </div>
+    </div>
 
-          <div className="flex flex-wrap -mx-0 mb-6">
-            <div className="w-full px-3">
-              <label
-                className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                htmlFor="guests"
-              >
-                Nombres de los invitados en tu grupo / Names of Guests in Your
-                Party
-              </label>
+    {numberOfGuests !== "0" && (
+      <div className="flex flex-wrap -mx-0 mb-6">
+        <div className="w-full px-3">
+          <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
+            Nombres de los invitados en tu grupo / Names of Guests in Your Party
+          </label>
+          {guestNames.map((guest, index) => (
+            <div key={index} className="flex items-center mb-2">
               <input
                 className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                id="guests"
                 type="text"
-                placeholder="Nombres de invitados / Guest Names"
-                value={guests}
-                onChange={(e) => setGuests(e.target.value)}
-                name="guests"
+                placeholder={`Invitado ${index + 1}`}
+                value={guest}
+                onChange={(e) => handleGuestChange(index, e.target.value)}
+                name={`guestName_${index + 1}`}
               />
+              {index > 0 && (
+                <button
+                  type="button"
+                  onClick={() => removeGuestField(index)}
+                  className="ml-2 text-red-500"
+                >
+                  X
+                </button>
+              )}
             </div>
-          </div>
+          ))}
+
+          {guestNames.length < 4 && (
+            <button
+              type="button"
+              onClick={addGuestField}
+              className="mt-2 text-blue-500"
+            >
+              Agregar otro invitado / Add another guest
+            </button>
+          )}
+        </div>
+      </div>
+    )}
 
           <div className="flex flex-wrap -mx-0 mb-6">
             <div className="w-full px-3">
