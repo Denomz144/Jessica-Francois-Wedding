@@ -29,13 +29,13 @@ const CeremonySection: React.FC = () => {
             <h2 className="font-dancing text-4xl md:text-7xl mb-10 mt-10">
               Our Ceremony
             </h2>
-            <p className="text-2xl md:text-5xl font-serif mb-10">6:00 PM</p>
+            <p className="text-2xl md:text-5xl font-serif mb-10">6:30 PM</p>
             <p className="text-xl md:text-2xl mb-2">CajaMarca Chapel</p>
             <p className="text-xl md:text-2xl mb-2">
               Ruta al boqueron, km 22.5,
             </p>
             <p className="text-xl md:text-2xl mb-10">
-              Volcán de San Salvador,<p></p>El Salvador
+              Volcán de San Salvador, Santa Tecla,<p></p>El Salvador
             </p>
           </div>
 

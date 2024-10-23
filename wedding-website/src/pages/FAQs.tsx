@@ -111,10 +111,10 @@ const FAQs: React.FC = () => {
               "4. ¿A qué hora debo llegar? / What time should I arrive?",
             respuesta: (
               <>
-                La ceremonia empieza a las _______ de la tarde. Por favor llegar
+                La ceremonia empieza a las 6:30 pm de la tarde. Por favor llegar
                 15-20 minutos antes de la ceremonia.
                 <div style={{ margin: "20px 0" }} />
-                The ceremony will start at _______. Please arrive 15-20 minutes
+                The ceremony will start at 6:30 pm. Please arrive 15-20 minutes
                 before the ceremony.
               </>
             ),

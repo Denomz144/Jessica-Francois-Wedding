@@ -88,8 +88,8 @@ const HeroSection: React.FC = () => {
         </p>
         <p className="text-lg lg:text-2xl mt-2 lg:mt-4 mb-4 lg:mb-8">
           Tienen el honor en invitarle a la Ceremonia de Matrimonio Religioso de
-          <span style={{fontWeight: "bold" }} className="font-sans"> Jessica Muñoz </span> y <span style={{fontWeight: "bold" }} className="font-sans"> François Châteauvert</span>, que se efectuará el día 25 de
-          Enero a las 6:00 p.m. en la capilla de Cajamarca. Recepción a seguir.
+          <span style={{ fontWeight: "bold" }} className="font-sans"> Jessica Muñoz </span> y <span style={{ fontWeight: "bold" }} className="font-sans"> François Châteauvert</span>, que se efectuará el día 25 de
+          Enero a las 6:30 p.m. en la Capilla Nuestra Señora del Carmen, Cajamarca. Recepción a seguir.
         </p>
         <div style={{ margin: "30px 0" }}></div>
         <hr style={{ border: "0.5px solid #aaa", margin: "30px 0" }} />
@@ -102,10 +102,10 @@ const HeroSection: React.FC = () => {
         </p>
         <p className="text-lg lg:text-2xl mt-2 lg:mt-4 mb-4 lg:mb-8">
           Have the honor to invite you to the Religious Wedding Ceremony of
-          <span style={{fontWeight: "bold" }} className="font-sans"> Jessica Muñoz </span>
+          <span style={{ fontWeight: "bold" }} className="font-sans"> Jessica Muñoz </span>
           and
-          <span style={{fontWeight: "bold" }} className="font-sans"> François Châteauvert</span>, which will
-          take place on January 25th at 6:00 p.m. in the Chapel of Cajamarca.
+          <span style={{ fontWeight: "bold" }} className="font-sans"> François Châteauvert</span>, which will
+          take place on January 25th at 6:30 p.m. in the Chapel of Nuestra Señora del Carmen, Cajamarca.
           Reception to follow.
         </p>
       </div>
