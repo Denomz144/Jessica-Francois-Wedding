@@ -11,7 +11,6 @@ const Rsvp: React.FC = () => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
-  const [guests, setGuests] = useState("");
   const [numberOfGuests, setNumberOfGuests] = useState("");
   const [comments, setComments] = useState("");
   const [attending, setAttending] = useState("");
@@ -105,7 +104,6 @@ const Rsvp: React.FC = () => {
     setFirstName("");
     setLastName("");
     setEmail("");
-    setGuests("");
     setNumberOfGuests("");
     setComments("");
     setAttending("");
