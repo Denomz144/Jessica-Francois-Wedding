@@ -6,7 +6,7 @@ import FooterSection from "../components/FooterSection";
 
 const Rsvp: React.FC = () => {
   const navigate = useNavigate();
-  const [state, handleSubmit] = useForm("mjvnovpz");
+  const [state, handleSubmit, reset] = useForm("mjvnovpz");
   const [showModal, setShowModal] = useState(false);
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -18,12 +18,18 @@ const Rsvp: React.FC = () => {
   const [foodAllergies, setFoodAllergies] = useState("");
   const [guestNames, setGuestNames] = useState([""]); // Inicializa con un campo
 
+
   useEffect(() => {
     if (state.succeeded) {
       setShowModal(true);
     }
   }, [state.succeeded]);
 
+
+  const resetFormState = () => {
+    reset(); // Restablecer el estado del formulario
+    setShowModal(false); // Cerrar el modal
+  };
   // Función para validar el correo electrónico
   const validateEmail = (email: string) => {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -292,71 +298,71 @@ const Rsvp: React.FC = () => {
           </div>
 
           <div className="flex flex-wrap -mx-0 mb-6">
-      <div className="w-full px-3">
-        <label
-          className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-          htmlFor="number-of-guests"
-        >
-          Número total de invitados (incluyéndote a ti) / Total Number of
-          Guests (including yourself)
-        </label>
-        <select
-          className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-          id="number-of-guests"
-          value={numberOfGuests}
-          onChange={(e) => setNumberOfGuests(e.target.value)}
-          name="numberOfGuests"
-        >
-          <option value="">Selecciona... / Select...</option>
-          <option value="0">0 (solo tú) / 0 (just you)</option>
-          <option value="1">1 (tú + 1 invitado) / 1 (you + 1 guest)</option>
-          <option value="2">2 (tú + 2 invitados) / 2 (you + 2 guests)</option>
-          <option value="3">3 (tú + 3 invitados) / 3 (you + 3 guests)</option>
-          <option value="4">4 (tú + 4 invitados) / 4 (you + 4 guests)</option>
-        </select>
-      </div>
-    </div>
-
-    {numberOfGuests !== "0" && (
-      <div className="flex flex-wrap -mx-0 mb-6">
-        <div className="w-full px-3">
-          <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
-            Nombres de los invitados en tu grupo / Names of Guests in Your Party
-          </label>
-          {guestNames.map((guest, index) => (
-            <div key={index} className="flex items-center mb-2">
-              <input
-                className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                type="text"
-                placeholder={`Invitado ${index + 1}`}
-                value={guest}
-                onChange={(e) => handleGuestChange(index, e.target.value)}
-                name={`guestName_${index + 1}`}
-              />
-              {index > 0 && (
-                <button
-                  type="button"
-                  onClick={() => removeGuestField(index)}
-                  className="ml-2 text-red-500"
-                >
-                  X
-                </button>
-              )}
+            <div className="w-full px-3">
+              <label
+                className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                htmlFor="number-of-guests"
+              >
+                Número total de invitados (incluyéndote a ti) / Total Number of
+                Guests (including yourself)
+              </label>
+              <select
+                className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                id="number-of-guests"
+                value={numberOfGuests}
+                onChange={(e) => setNumberOfGuests(e.target.value)}
+                name="numberOfGuests"
+              >
+                <option value="">Selecciona... / Select...</option>
+                <option value="0">0 (solo tú) / 0 (just you)</option>
+                <option value="1">1 (tú + 1 invitado) / 1 (you + 1 guest)</option>
+                <option value="2">2 (tú + 2 invitados) / 2 (you + 2 guests)</option>
+                <option value="3">3 (tú + 3 invitados) / 3 (you + 3 guests)</option>
+                <option value="4">4 (tú + 4 invitados) / 4 (you + 4 guests)</option>
+              </select>
             </div>
-          ))}
+          </div>
 
-          {guestNames.length < 4 && (
-            <button
-              type="button"
-              onClick={addGuestField}
-              className="mt-2 text-blue-500"
-            >
-              Agregar otro invitado / Add another guest
-            </button>
+          {numberOfGuests !== "0" && (
+            <div className="flex flex-wrap -mx-0 mb-6">
+              <div className="w-full px-3">
+                <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
+                  Nombres de los invitados en tu grupo / Names of Guests in Your Party
+                </label>
+                {guestNames.map((guest, index) => (
+                  <div key={index} className="flex items-center mb-2">
+                    <input
+                      className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                      type="text"
+                      placeholder={`Invitado ${index + 1}`}
+                      value={guest}
+                      onChange={(e) => handleGuestChange(index, e.target.value)}
+                      name={`guestName_${index + 1}`}
+                    />
+                    {index > 0 && (
+                      <button
+                        type="button"
+                        onClick={() => removeGuestField(index)}
+                        className="ml-2 text-red-500"
+                      >
+                        X
+                      </button>
+                    )}
+                  </div>
+                ))}
+
+                {guestNames.length < 4 && (
+                  <button
+                    type="button"
+                    onClick={addGuestField}
+                    className="mt-2 text-blue-500"
+                  >
+                    Agregar otro invitado / Add another guest
+                  </button>
+                )}
+              </div>
+            </div>
           )}
-        </div>
-      </div>
-    )}
 
           <div className="flex flex-wrap -mx-0 mb-6">
             <div className="w-full px-3">
@@ -423,11 +429,13 @@ const Rsvp: React.FC = () => {
               className="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-700"
               onClick={() => {
                 setShowModal(false);
-                resetForm();
+                resetForm(); // Reinicia los campos del formulario
+                resetFormState(); // Reinicia el estado de Formspree
               }}
             >
               Cerrar / Close
             </button>
+
           </div>
         </div>
       )}
