@@ -68,7 +68,7 @@ const Rsvp: React.FC = () => {
     const guestCount = parseInt(numberOfGuests, 10);
 
     // Validar que el número de campos de invitados coincida con el número de invitados
-    if (guestCount > 0 && guestNames.length !== guestCount) {
+    if (guestCount > 1 && guestNames.length !== guestCount - 1) {
       alert(
         `Por favor, ingrese el nombre de todos los invitados. Se requieren ${guestCount} nombres. / Please enter the name of all guests. ${guestCount} guest names are required.`
       );
@@ -76,7 +76,7 @@ const Rsvp: React.FC = () => {
     }
 
     // Verificar que ninguno de los campos de nombre de invitados esté vacío si guestCount > 0
-    if (guestCount > 0) {
+    if (guestCount > 1) {
       const emptyGuestNames = guestNames.filter((name) => !name.trim());
       if (emptyGuestNames.length > 0) {
         alert(
