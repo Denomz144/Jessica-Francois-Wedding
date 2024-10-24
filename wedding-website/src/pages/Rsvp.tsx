@@ -312,8 +312,7 @@ const Rsvp: React.FC = () => {
                 className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
                 htmlFor="number-of-guests"
               >
-                Número total de invitados (incluyéndote a ti) / Total Number of
-                Guests (including yourself)
+                Número total de personas (incluyéndote a ti) / Total Number of People (including yourself)
               </label>
               <select
                 className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
@@ -323,16 +322,17 @@ const Rsvp: React.FC = () => {
                 name="numberOfGuests"
               >
                 <option value="">Selecciona... / Select...</option>
-                <option value="0">0 (solo tú) / 0 (just you)</option>
-                <option value="1">1 (tú + 1 invitado) / 1 (you + 1 guest)</option>
-                <option value="2">2 (tú + 2 invitados) / 2 (you + 2 guests)</option>
-                <option value="3">3 (tú + 3 invitados) / 3 (you + 3 guests)</option>
-                <option value="4">4 (tú + 4 invitados) / 4 (you + 4 guests)</option>
+                <option value="1">1 (solo tú) / 1 (just you)</option>
+                <option value="2">2 (tú + 1 invitado) / 2 (you + 1 guest)</option>
+                <option value="3">3 (tú + 2 invitados) / 3 (you + 2 guests)</option>
+                <option value="4">4 (tú + 3 invitados) / 4 (you + 3 guests)</option>
+                <option value="5">5 (tú + 4 invitados) / 5 (you + 4 guests)</option>
               </select>
             </div>
           </div>
 
-          {numberOfGuests !== "0" && (
+
+          {numberOfGuests !== "1" && (
             <div className="flex flex-wrap -mx-0 mb-6">
               <div className="w-full px-3">
                 <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
